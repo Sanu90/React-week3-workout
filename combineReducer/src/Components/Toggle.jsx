@@ -3,7 +3,7 @@ import "./Toggle.css";
 import { useDispatch, useSelector } from "react-redux";
 
 function Toggle() {
-  const togg = useSelector((state) => state.toggle);
+  const togg = useSelector((state) => state.toggle.toggle);
   console.log("Toggle value is--->", togg);
 
   const dispatch = useDispatch();
@@ -21,7 +21,6 @@ function Toggle() {
         onClick={() => {
           dispatch({
             type: "toggle",
-            payload: true,
           });
         }}
       >
